@@ -1,9 +1,12 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": false
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ng-mazdik": {
+    "ng-mazdik-edu": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -17,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ng-mazdik",
+            "outputPath": "dist/ng-mazdik-lib-edu",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -28,7 +31,7 @@
             ],
             "styles": [
               "src/styles.css",
-              "dist/ng-mazdik-lib/styles/bundled.css"
+              "dist/ng-mazdik-lib-edu/styles/bundled.css"
             ],
             "scripts": []
           },
@@ -69,10 +72,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "ng-mazdik:build:production"
+              "browserTarget": "ng-mazdik-edu:build:production"
             },
             "development": {
-              "browserTarget": "ng-mazdik:build:development"
+              "browserTarget": "ng-mazdik-edu:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -80,7 +83,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ng-mazdik:build"
+            "browserTarget": "ng-mazdik-edu:build"
           }
         },
         "test": {
@@ -102,23 +105,23 @@
         }
       }
     },
-    "ng-mazdik-lib": {
+    "ng-mazdik-lib-edu": {
       "projectType": "library",
-      "root": "projects/ng-mazdik-lib",
-      "sourceRoot": "projects/ng-mazdik-lib/src",
+      "root": "projects/ng-mazdik-lib-edu",
+      "sourceRoot": "projects/ng-mazdik-lib-edu/src",
       "prefix": "lib",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "project": "projects/ng-mazdik-lib/ng-package.json"
+            "project": "projects/ng-mazdik-lib-edu/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/ng-mazdik-lib/tsconfig.lib.prod.json"
+              "tsConfig": "projects/ng-mazdik-lib-edu/tsconfig.lib.prod.json"
             },
             "development": {
-              "tsConfig": "projects/ng-mazdik-lib/tsconfig.lib.json"
+              "tsConfig": "projects/ng-mazdik-lib-edu/tsconfig.lib.json"
             }
           },
           "defaultConfiguration": "production"
@@ -126,13 +129,13 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/ng-mazdik-lib/src/test.ts",
-            "tsConfig": "projects/ng-mazdik-lib/tsconfig.spec.json",
-            "karmaConfig": "projects/ng-mazdik-lib/karma.conf.js"
+            "main": "projects/ng-mazdik-lib-edu/src/test.ts",
+            "tsConfig": "projects/ng-mazdik-lib-edu/tsconfig.spec.json",
+            "karmaConfig": "projects/ng-mazdik-lib-edu/karma.conf.js"
           }
         }
       }
     }
   },
-  "defaultProject": "ng-mazdik"
+  "defaultProject": "ng-mazdik-edu"
 }

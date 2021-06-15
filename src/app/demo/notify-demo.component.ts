@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NotifyService } from 'ng-mazdik-lib';
+import { NotifyService } from 'ng-mazdik-lib-edu';
 
 @Component({
   selector: 'app-notify-demo',

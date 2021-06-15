@@ -12,9 +12,9 @@
     "declaration": false,
     "downlevelIteration": true,
     "paths": {
-      "ng-mazdik-lib": [
-        "dist/ng-mazdik-lib/ng-mazdik-lib",
-        "dist/ng-mazdik-lib"
+      "ng-mazdik-lib-edu": [
+        "dist/ng-mazdik-lib-edu/ng-mazdik-lib-edu",
+        "dist/ng-mazdik-lib-edu"
       ]
     },
     "experimentalDecorators": true,

@@ -7,7 +7,7 @@ import {
   TreeViewModule, ContextMenuModule, NotifyModule, DropdownSelectModule, SelectListModule, DragDropModule, DropdownModule,
   DualListBoxModule, DraggableModule, ResizableModule, PaginationModule, ModalSelectModule, InlineEditModule, DynamicFormModule,
   TabsModule, NavMenuModule
-} from 'ng-mazdik-lib';
+} from 'ng-mazdik-lib-edu';
 import { DateFormatPipe } from './pipes/date-format.pipe';
 import { AppComponent } from './app.component';
 import { PageNotFoundComponent } from './not-found.component';

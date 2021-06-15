@@ -1,6 +1,6 @@
 import { Component, ViewChild, AfterViewInit } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
-import { NavMenuComponent } from 'ng-mazdik-lib';
+import { NavMenuComponent } from 'ng-mazdik-lib-edu';
 
 @Component({
   selector: 'app-root',

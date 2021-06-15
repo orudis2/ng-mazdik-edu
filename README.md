@@ -1,7 +1,7 @@
 # Angular UI component library
 
 ```
-npm i ng-mazdik-lib --save
+npm i ng-mazdik-lib-edu --save
 ```
 
 ### Styles
@@ -9,7 +9,7 @@ Add global styles in angular.json
 ```json
 "styles": [
   "src/styles.css",
-  "node_modules/ng-mazdik-lib/styles/bundled.css"
+  "node_modules/ng-mazdik-lib-edu/styles/bundled.css"
 ],
 ```
 
@@ -19,7 +19,7 @@ Add global styles in angular.json
 Feature-rich data table component for Angular with CRUD operations.
 ```typescript
 import {Component}  from '@angular/core';
-import {ColumnBase, CdtSettings, DataSource, DataManager, Validators} from 'ng-mazdik-lib';
+import {ColumnBase, CdtSettings, DataSource, DataManager, Validators} from 'ng-mazdik-lib-edu';
 import {DemoService} from './samples/services';
 
 @Component({
@@ -127,7 +127,7 @@ export class PlayersComponent {
 ```
 ### Sample data-table
 ```typescript
-import {ColumnBase, Settings, DataTable} from 'ng-mazdik-lib';
+import {ColumnBase, Settings, DataTable} from 'ng-mazdik-lib-edu';
 
 @Component({
   selector: 'app-data-table-demo',
@@ -148,7 +148,7 @@ export class DataTableDemoComponent {
 ```
 ### Sample tree-table
 ```typescript
-import {ColumnBase, Settings, TreeTable} from 'ng-mazdik-lib';
+import {ColumnBase, Settings, TreeTable} from 'ng-mazdik-lib-edu';
 import {TreeDemoService} from './tree-demo.service';
 
 @Component({
@@ -326,7 +326,7 @@ private subscriptions: Subscription[] = [];
 
 ### Sample translate
 ```typescript
-import {DtMessages, DtMessagesEn} from 'ng-mazdik-lib';
+import {DtMessages, DtMessagesEn} from 'ng-mazdik-lib-edu';
 
 messages: DtMessages = new DtMessagesEn({
   empty: 'No data to display',

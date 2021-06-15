@@ -1,5 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { Settings, DataTable } from 'ng-mazdik-lib';
+import { Settings, DataTable } from 'ng-mazdik-lib-edu';
 import { getColumnsPlayers, getColumnsRank, getColumnsInventory } from './columns';
 import { Subscription } from 'rxjs';
 

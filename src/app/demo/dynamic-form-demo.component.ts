@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { DynamicFormElement, GetOptionsFunc, ColumnBase } from 'ng-mazdik-lib';
+import { DynamicFormElement, GetOptionsFunc, ColumnBase } from 'ng-mazdik-lib-edu';
 import { getColumnsPlayers } from './columns';
 
 @Component({

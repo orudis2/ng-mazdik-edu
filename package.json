@@ -1,5 +1,5 @@
 {
-  "name": "ng-mazdik",
+  "name": "ng-mazdik-edu",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -8,9 +8,9 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "build-styles": "scss-bundle",
-    "lib:build": "ng build ng-mazdik-lib --configuration production && npm run build-styles",
-    "lib:watch": "ng build ng-mazdik-lib --watch --configuration development",
-    "lib:publish": "cd dist/ng-mazdik-lib && npm publish"
+    "lib:build": "ng build ng-mazdik-lib-edu --configuration production && npm run build-styles",
+    "lib:watch": "ng build ng-mazdik-lib-edu --watch --configuration development",
+    "lib:publish": "cd dist/ng-mazdik-lib-edu && npm publish"
   },
   "private": true,
   "dependencies": {

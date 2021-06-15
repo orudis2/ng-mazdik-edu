@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild, TemplateRef, OnDestroy, HostListener } from '@angular/core';
-import { ColumnBase, CdtSettings, DataManager, CellEventType, SelectItem, EventHelper, findAncestor } from 'ng-mazdik-lib';
+import { ColumnBase, CdtSettings, DataManager, CellEventType, SelectItem, EventHelper, findAncestor } from 'ng-mazdik-lib-edu';
 import { DemoService } from './demo.service';
 import { Subscription } from 'rxjs';
 
