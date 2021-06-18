@@ -18,9 +18,11 @@
  <!-- <button class="dt-button-actions" [ngClass]="{'cell-changed':dataManager.rowChanged(row)}" (click)="onRowMenuClick($event, row)">
     <i class="dt-icon-actions"></i>
   </button>-->
-  <button *ngFor="let btn of actionMenu" class="dt-button-actions" [ngClass]="{'cell-changed':dataManager.rowChanged(row)}" (click)="btn.command(row)" [disabled]="btn.disabled">
+  <span *ngFor="let btn of actionMenu">
+  <button *ngIf="!btn.disabled" class="dt-button-actions" [ngClass]="{'cell-changed':dataManager.rowChanged(row)}" (click)="btn.command(row)" [disabled]="btn.disabled" >
     <i class="{{btn.icon}}"></i>
   </button>
+</span>
 </ng-template>
 <ng-template #headerActionTemplate>
   <button class="filter-action"
