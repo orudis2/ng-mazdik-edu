@@ -39,7 +39,7 @@ export class CrudTableDemoComponent implements OnInit {
     this.dataManager.events.onLoading(true);
     this.columns=getColumnsPlayers();
     let column = this.dataManager.columns.find(x => x.name === 'action');
-    column.width=254;
+    column.width=200;
   }
 
   filterValuesFunc(columnName: string): Promise<SelectItem[]> {
