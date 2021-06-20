@@ -1,3 +1,4 @@
+import { Settings } from './../ng-data-table/base/settings';
 import {
   Component, Input, Output, EventEmitter, ChangeDetectionStrategy, ChangeDetectorRef, HostBinding, ElementRef, OnInit, OnDestroy
 } from '@angular/core';

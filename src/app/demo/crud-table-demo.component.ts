@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CdtSettings, DataManager, SelectItem, DtMessages, DtMessagesEn } from 'ng-mazdik-lib-edu';
+import { CdtSettings, DataManager, SelectItem, DtMessages, DtMessagesEn, ColumnBase } from 'ng-mazdik-lib-edu';
 import { DemoService } from './demo.service';
 import { getColumnsPlayers } from './columns';
 
@@ -11,6 +11,7 @@ import { getColumnsPlayers } from './columns';
 export class CrudTableDemoComponent implements OnInit {
 
   dataManager: DataManager;
+  columns: ColumnBase[];
 
   settings: CdtSettings = new CdtSettings({
     crud: true,
@@ -34,7 +35,12 @@ export class CrudTableDemoComponent implements OnInit {
     this.dataManager.pager.perPage = 20;
   }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {
+    this.dataManager.events.onLoading(true);
+    this.columns=getColumnsPlayers();
+    let column = this.dataManager.columns.find(x => x.name === 'action');
+    column.width=254;
+  }
 
   filterValuesFunc(columnName: string): Promise<SelectItem[]> {
     return new Promise((resolve) => {

@@ -55,7 +55,7 @@ export class TemplateDemoComponent implements OnInit {
     filter: false,
     frozen: true,
     resizeable: false,
-    width: 40,
+   // width: 40,
     minWidth: 40,
     formHidden: true,
     cellClass: 'action-cell',

@@ -11,7 +11,7 @@ describe('Column', () => {
       name: 'column1',
       title: 'column1',
       frozen: true,
-      width: 150,
+      width: 250,
       minWidth: 100,
       maxWidth: 300,
       options: [

@@ -42,6 +42,7 @@ export class CrudTableComponent implements OnInit, OnDestroy {
       actionColumn.cellTemplate = this.rowActionTemplate;
       actionColumn.headerCellTemplate = this.headerActionTemplate;
     }
+
     this.initRowMenu();
     if (this.dataManager.settings.initLoad) {
       this.dataManager.loadItems().catch(() => this.cd.markForCheck());
@@ -111,6 +112,7 @@ export class CrudTableComponent implements OnInit, OnDestroy {
           icon: 'dt-icon dt-icon-ok',
           command: (row) => this.dataManager.update(row),
           disabled: true,
+
         },
         {
           id: this.dataManager.messages.delete,
