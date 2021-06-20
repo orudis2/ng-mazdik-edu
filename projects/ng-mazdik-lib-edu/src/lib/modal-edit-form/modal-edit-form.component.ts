@@ -84,6 +84,7 @@ export class ModalEditFormComponent implements OnInit {
       element.hidden = column.formHidden;
       element.keyElement = column.keyColumn;
       element.disableOnEdit = column.formDisableOnEdit;
+	  element.widthInGridColumns=column.widthInGridColumns;
       temp.push(element);
       tempDetailView.push({ key: column.title, value: column.getValueView(this.dataManager.item) });
     }

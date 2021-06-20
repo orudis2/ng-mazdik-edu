@@ -24,6 +24,7 @@ export class Column extends ColumnBase {
   }
 
   private setDefaults(): void {
+    
     if (!this.width) {
       this.width = 150;
     }
@@ -77,6 +78,7 @@ export class Column extends ColumnBase {
   }
 
   setWidth(width: number): void {
+   
     if (width <= this.minWidth) {
       width = this.minWidth;
     } else if (width >= this.maxWidth) {

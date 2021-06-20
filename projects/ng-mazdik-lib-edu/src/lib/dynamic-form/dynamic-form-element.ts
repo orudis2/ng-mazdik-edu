@@ -14,6 +14,7 @@ export class DynamicFormElement {
   hidden?: boolean;
   keyElement?: string;
   disableOnEdit?: boolean;
+  widthInGridColumns?:number;
 
   errors: string[] = [];
 

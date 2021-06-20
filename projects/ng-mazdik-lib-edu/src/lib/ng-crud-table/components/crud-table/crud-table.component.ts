@@ -75,16 +75,16 @@ export class CrudTableComponent implements OnInit, OnDestroy {
   }
 
   initRowMenu(): void  {
-    if (this.dataManager.settings.singleRowView) {
-      this.actionMenu.push(
-        {
-          id: this.dataManager.messages.titleDetailView,
-          label: this.dataManager.messages.titleDetailView,
-          icon: 'dt-icon dt-icon-rightwards',
-          command: (row) => this.viewAction(row),
-        }
-      );
-    }
+    //if (this.dataManager.settings.singleRowView) {
+      // this.actionMenu.push(
+      //   {
+      //     id: this.dataManager.messages.titleDetailView,
+      //     label: this.dataManager.messages.titleDetailView,
+      //     icon: 'dt-icon dt-icon-rightwards',
+      //     command: (row) => this.viewAction(row),
+      //   }
+      // );
+   // }
     if (this.dataManager.settings.crud) {
       this.actionMenu.push(
         {
@@ -93,12 +93,12 @@ export class CrudTableComponent implements OnInit, OnDestroy {
           icon: 'dt-icon dt-icon-pencil',
           command: (row) => this.updateAction(row),
         },
-        {
-          id: this.dataManager.messages.refresh,
-          label: this.dataManager.messages.refresh,
-          icon: 'dt-icon dt-icon-refresh',
-          command: (row) => this.dataManager.refreshRow(row),
-        },
+        // {
+        //   id: this.dataManager.messages.refresh,
+        //   label: this.dataManager.messages.refresh,
+        //   icon: 'dt-icon dt-icon-refresh',
+        //   command: (row) => this.dataManager.refreshRow(row),
+        // },
         {
           id: this.dataManager.messages.revertChanges,
           label: this.dataManager.messages.revertChanges,
@@ -120,12 +120,12 @@ export class CrudTableComponent implements OnInit, OnDestroy {
           icon: 'dt-icon dt-icon-remove',
           command: (row) => confirm('Delete ?') ? this.dataManager.delete(row) : null,
         },
-        {
-          id: this.dataManager.messages.duplicate,
-          label: this.dataManager.messages.duplicate,
-          icon: 'dt-icon dt-icon-plus',
-          command: (row) => this.duplicateAction(row),
-        },
+         {
+           id: this.dataManager.messages.duplicate,
+           label: this.dataManager.messages.duplicate,
+           icon: 'dt-icon dt-icon-plus',
+           command: (row) => this.duplicateAction(row),
+         },
       );
     }
   }

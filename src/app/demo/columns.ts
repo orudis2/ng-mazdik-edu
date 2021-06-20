@@ -11,6 +11,7 @@ export function getColumnsPlayers(): Column[] {
       width: 100,
       formHidden: true,
       type: 'number',
+	  widthInGridColumns:3
     },
     {
       title: 'Name',
@@ -20,6 +21,7 @@ export function getColumnsPlayers(): Column[] {
       frozen: true,
       width: 200,
       validatorFunc: Validators.get({ required: true, minLength: 2, pattern: '^[a-zA-Z ]+$' }),
+	  widthInGridColumns: 3
     },
     {
       title: 'Race',
@@ -32,6 +34,7 @@ export function getColumnsPlayers(): Column[] {
         { id: 'ELYOS', name: 'ELYOS' },
       ],
       validatorFunc: Validators.get({ required: true }),
+	  widthInGridColumns: 3
     },
     {
       title: 'Cascading Select',
@@ -48,6 +51,7 @@ export function getColumnsPlayers(): Column[] {
       ],
       dependsColumn: 'race',
       multiSelectFilter: true,
+	   widthInGridColumns: 3
     },
     {
       title: 'Gender',
@@ -59,6 +63,7 @@ export function getColumnsPlayers(): Column[] {
         { id: 'MALE', name: 'MALE' },
         { id: 'FEMALE', name: 'FEMALE' },
       ],
+	   widthInGridColumns: 3
     },
     {
       title: 'Exp',
@@ -67,6 +72,7 @@ export function getColumnsPlayers(): Column[] {
       filter: true,
       type: 'number',
       validatorFunc: Validators.get({ required: true, maxLength: 10, pattern: '^[0-9]+$' }),
+	  widthInGridColumns: 3
     },
     {
       title: 'Last online',
@@ -74,6 +80,7 @@ export function getColumnsPlayers(): Column[] {
       sortable: true,
       filter: true,
       type: 'datetime-local',
+	  widthInGridColumns: 3
     },
     {
       title: 'Account name',
@@ -81,36 +88,38 @@ export function getColumnsPlayers(): Column[] {
       type: 'select-popup',
       optionsUrl: 'assets/accounts.json',
       keyColumn: 'account_id',
+	  widthInGridColumns: 3
     },
-    { title: 'Account id', name: 'account_id' },
-    { title: 'Player class', name: 'player_class' },
+    { title: 'Account id', name: 'account_id',widthInGridColumns: 3 },
+    { title: 'Player class', name: 'player_class',widthInGridColumns: 3 },
     {
       title: 'Online',
       name: 'online',
       type: 'checkbox',
       options: [
         { id: 1, name: 'Online' }
-      ]
+      ],
+	  widthInGridColumns: 3
     },
-    { title: 'Cube size', name: 'cube_size', type: 'number' },
-    { title: 'Broker Kinah', name: 'brokerKinah' },
-    { title: 'Bind point', name: 'bind_point' },
-    { title: 'X', name: 'x' },
-    { title: 'Y', name: 'y' },
-    { title: 'Z', name: 'z' },
-    { title: 'Recoverexp', name: 'recoverexp' },
-    { title: 'Heading', name: 'heading' },
-    { title: 'World id', name: 'world_id' },
-    { title: 'Creation date', name: 'creation_date', type: 'datetime-local' },
-    { title: 'Stigma slot size', name: 'advanced_stigma_slot_size' },
-    { title: 'Warehouse size', name: 'warehouse_size' },
-    { title: 'Mailbox Letters', name: 'mailboxLetters' },
-    { title: 'Mailbox Unread', name: 'mailboxUnReadLetters' },
-    { title: 'Title id', name: 'title_id' },
-    { title: 'Repletion state', name: 'repletionstate' },
-    { title: 'Rebirth id', name: 'rebirth_id' },
-    { title: 'Member points', name: 'memberpoints' },
-    { title: 'Quest status', name: 'quest.status' }
+    { title: 'Cube size', name: 'cube_size', type: 'number', widthInGridColumns: 3 },
+    { title: 'Broker Kinah', name: 'brokerKinah', widthInGridColumns: 3 },
+    { title: 'Bind point', name: 'bind_point', widthInGridColumns: 3 },
+    { title: 'X', name: 'x', widthInGridColumns: 3 },
+    { title: 'Y', name: 'y', widthInGridColumns: 3 },
+    { title: 'Z', name: 'z', widthInGridColumns: 3 },
+    { title: 'Recoverexp', name: 'recoverexp', widthInGridColumns: 3 },
+    { title: 'Heading', name: 'heading', widthInGridColumns: 3 },
+    { title: 'World id', name: 'world_id', widthInGridColumns: 3 },
+    { title: 'Creation date', name: 'creation_date', type: 'datetime-local', widthInGridColumns: 3 },
+    { title: 'Stigma slot size', name: 'advanced_stigma_slot_size', widthInGridColumns: 3 },
+    { title: 'Warehouse size', name: 'warehouse_size', widthInGridColumns: 3 },
+    { title: 'Mailbox Letters', name: 'mailboxLetters', widthInGridColumns: 3 },
+    { title: 'Mailbox Unread', name: 'mailboxUnReadLetters', widthInGridColumns: 3 },
+    { title: 'Title id', name: 'title_id', widthInGridColumns: 3 },
+    { title: 'Repletion state', name: 'repletionstate', widthInGridColumns: 3 },
+    { title: 'Rebirth id', name: 'rebirth_id', widthInGridColumns: 3 },
+    { title: 'Member points', name: 'memberpoints', widthInGridColumns: 3 },
+    { title: 'Quest status', name: 'quest.status', widthInGridColumns: 3 }
   ];
   return columnsPlayers;
 }

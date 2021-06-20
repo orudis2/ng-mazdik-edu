@@ -40,10 +40,11 @@ export class BodyCellComponent implements OnInit, OnDestroy {
 
   @HostBinding('attr.role') role = 'gridcell';
 
-  @HostBinding('style.width.px')
-  get width(): number {
-    return this.cell.column.width;
-  }
+ @HostBinding('style.width.px')
+ get width(): any {
+  if (this.cell.column.cellClass == 'action-cell') return;
+     return this.cell.column.width;
+   }
 
   @HostBinding('style.left.px')
   get left(): number {
