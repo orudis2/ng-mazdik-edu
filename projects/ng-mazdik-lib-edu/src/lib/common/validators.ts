@@ -5,6 +5,7 @@ export interface Validation {
   minLength?: number;
   maxLength?: number;
   pattern?: string | RegExp;
+  descError?: string;
 }
 
 export class Validators {
@@ -22,16 +23,16 @@ export class Validators {
     const length: number = !isBlank(value) ? value.toString().length : 0;
 
     if (validation.required && isBlank(value)) {
-      temp.push(`${name} is required.`);
+      temp.push(!validation.descError ? `${name} es obligatorio.` : validation.descError);
     }
     if (validation.minLength && length < validation.minLength) {
-      temp.push(`${name} has to be at least ${validation.minLength} characters long. ActualLength: ${length}`);
+      temp.push(!validation.descError ? `${name} debe tener al menos ${validation.minLength} caracteres de largo. Tiene ${length}.` : validation.descError);
     }
     if (validation.maxLength && length > validation.maxLength) {
-      temp.push(`${name} can't be longer then ${validation.maxLength} characters. ActualLength: ${length}`);
+      temp.push(!validation.descError ? `${name} no puede tener más de ${validation.maxLength} caracteres. Tiene ${length}.` : validation.descError);
     }
     if (validation.pattern && value) {
-      const patternResult = Validators.patternValidate(name, value, validation.pattern);
+      const patternResult = Validators.patternValidate(name, value, validation.pattern, validation.descError);
       if (patternResult) {
         temp.push(patternResult);
       }
@@ -39,7 +40,7 @@ export class Validators {
     return temp;
   }
 
-  static patternValidate(name: string, value: any, pattern: string | RegExp): string {
+  static patternValidate(name: string, value: any, pattern: string | RegExp, descError?: string): string {
     let regex: RegExp;
     let regexStr: string;
     if (typeof pattern === 'string') {
@@ -49,7 +50,7 @@ export class Validators {
       regexStr = pattern.toString();
       regex = pattern;
     }
-    return regex.test(value) ? null : `${name} must match this pattern: ${regexStr}.`;
+    return regex.test(value) ? null : (!descError ? `${name} debe cumplir el patrón: ${regexStr}.` : descError);
   }
 
 }
